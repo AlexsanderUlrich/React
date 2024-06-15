@@ -9,7 +9,7 @@
 }
 
 .campo-texto input {
-    background-color: #FFF;
+    background-color: #696969;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
     width: 100%;
     border: none;
@@ -17,5 +17,9 @@
     padding: 24px;
     box-sizing: border-box;
     outline: none;
-    color: rgb(4, 30, 53);
+    color: rgb(4, 30, 53);    
+}
+
+.campo-texto input::placeholder {
+    color: gray   
 }

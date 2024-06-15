@@ -2,17 +2,19 @@
     display: flex;
     justify-content: center;
     margin: 80px 0;
+    color: rgb(179, 179, 179);
 }
 
 .formulario h2 {
     width: 100%;
-    text-align: center;    
+    text-align: center;
+    color: white;    
 }
 
 .formulario form {
     max-width: 80%;
-    background-color: #F2F2F2;
+    background-color: #4d4d4d;
     border-radius: 20px;
     padding: 36px 64px;
-    box-shadow: 8px 8px 16px rgba(0, 0 ,0, 0.08);
+    box-shadow: 8px 8px 30px rgba(0, 0 ,0, 0.8);
 }

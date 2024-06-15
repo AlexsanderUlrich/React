@@ -1,16 +1,20 @@
 .botao {
-    height: 5%;
-    width: 20%;    
+    height: 7%;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;    
 }
 
 .botao button {
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
     background-color: rgb(1, 197, 1);
+    border: 2px solid rgb(1, 197, 1);
     color: white; 
     height: 100%;
     width: 100%;
-    border-radius: 20px;
-    border: none;
+    border-radius: 20px;    
+    font-size: large;
+    cursor: pointer; 
 }
 
 .botao button:hover {
@@ -21,4 +25,5 @@
     height: 100%;
     width: 100%;
     border-radius: 20px;
+    font-size: large;   
 }
