@@ -1,14 +1,14 @@
-.campo-texto {
+.lista-suspensa {
     margin: 24px;
 }
 
-.campo-texto label {
+.lista-suspensa label {
     display: block;
     margin-bottom: 8px;
     font-size: 24px;
 }
 
-.campo-texto input {
+.lista-suspensa select {
     background-color: #FFF;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
     width: 100%;
@@ -18,4 +18,8 @@
     box-sizing: border-box;
     outline: none;
     color: rgb(4, 30, 53);
+}
+
+.lista-suspensa option {
+    color: rgb(4, 30, 53);   
 }
