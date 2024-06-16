@@ -1,21 +1,53 @@
 import Banner from "./componentes/Banner"
 import Formulario from "./componentes/Formulario";
-import {useState} from "react"
+import { useState } from "react"
+import Jogo from "./componentes/Jogo"
+
 
 
 function App() {
 
-  const [colaboradores, setColaboradores] = useState([]);
+  const jogos = [
+    {
+      nome: 'Valorant',
+      corPrimaria: '#FF1A44',
+      corSecundaria: '#FF7374',
+    },
+    {
+      nome: 'Counter-Striker',
+      corPrimaria: '#02B2D1',
+      corSecundaria: '#3575AD',
+    },
+    {
+      nome: 'Overwatch',
+      corPrimaria: '#f88d00',
+      corSecundaria: '#ffed88',
+    },
 
-  const cadastroColaborador = (colaboradorNovo) => {
-    setColaboradores([...colaboradores, colaboradorNovo])
-    console.log(colaboradorNovo)
+  ]
+
+  const [Players, setPlayer] = useState([]);
+
+  const cadastroPlayer = (playerNovo) => {
+    setPlayer([...Players, playerNovo])
+    console.log(playerNovo)
   };
 
   return (
     <div className="App">
+
       <Banner />
-      <Formulario  cadastroNovoColaborador={colaboradorNovo => cadastroColaborador(colaboradorNovo)}/>
+      <Formulario nomeDosJogos={jogos.map(jogo => jogo.nome)} cadastroNovoPlayer={playerNovo => cadastroPlayer(playerNovo)} />
+
+      {jogos.map(jogo => <Jogo
+        key={jogo.nome}
+        nome={jogo.nome}
+        corPrimaria={jogo.corPrimaria}
+        corSecundaria={jogo.corSecundaria}
+        players={Players.filter(player => player.jogo === jogo.nome)}
+      />)}
+
+
     </div>
 
   )

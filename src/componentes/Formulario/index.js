@@ -5,32 +5,29 @@ import Botao from '../Botao';
 import { useState } from 'react'
 
 
-function Formulario(props) {
-
-    const times = [
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'Devops',
-        'UX e Design',
-        'Mobile',
-        ' Inovação e Gestão'
-    ]
+function Formulario(props) {   
+    
 
     const [nome, setNome] = useState('')
-    const [cargo, setCargo] = useState('')
+    const [funcao, setFuncao] = useState('')
     const [imagem, setImagem] = useState('')
-    const [time, setTime] = useState('')
+    const [jogo, setJogo] = useState('')
 
     const aoSalvar = (evento) => {
         evento.preventDefault()
-        props.cadastroNovoColaborador({
+        props.cadastroNovoPlayer({
             nome,
-            cargo,
+            funcao,
             imagem,
-            time
+            jogo
         })
+        setNome('')
+        setFuncao('')
+        setImagem('')
+        setJogo('')
     }
+   
+
 
     return (
         <section className="formulario" >
@@ -45,10 +42,10 @@ function Formulario(props) {
                 />
                 <CampoTexto
                     obrigatorio={true}
-                    label="Cargo"
-                    placeholder="Digite seu cargo"
-                    valor={cargo}
-                    aoAlterado={valor => setCargo(valor)}
+                    label="Função"
+                    placeholder="Digite a função"
+                    valor={funcao}
+                    aoAlterado={valor => setFuncao(valor)}
                 />
                 <CampoTexto
                     label="Imagem"
@@ -59,10 +56,10 @@ function Formulario(props) {
 
                 <ListaSuspensa
                     obrigatorio={true}
-                    label="Time"
-                    itens={times}
-                    valor={time}
-                    aoAlterado={valor => setTime(valor)}
+                    label="Jogo"
+                    itens={props.nomeDosJogos}
+                    valor={jogo}
+                    aoAlterado={valor => setJogo(valor)}
                 />
 
                 <Botao titulo="Gravar" />
