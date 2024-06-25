@@ -1,11 +1,15 @@
 import './Player.css'
 
 function Player (props) {
-    return (    
-        <section className='player'>
+    const Fundo = {
+        backgroundColor: props.fundo       
+    }
 
-            <div className='cabecalho'> 
-                <img src='./public/images/banner.jpg' alt='Imagem'/>  
+    return (    
+        <div className='player'>
+
+            <div className='cabecalho' style={Fundo}> 
+                <img src={props.imagem} alt='Imagem' onError={(e) => { e.target.src = 'path/to/placeholder/image.png';}}/>  
             </div>
 
             <div className='rodape'> 
@@ -13,7 +17,7 @@ function Player (props) {
                 <h5>{props.funcao}</h5>
             </div>
 
-        </section>
+        </div>
         )
 }
 

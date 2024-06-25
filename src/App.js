@@ -9,7 +9,7 @@ function App() {
 
   const jogos = [
     {
-      nome: 'Valorant',
+      nome: 'VALORANT',
       corPrimaria: '#FF1A44',
       corSecundaria: '#FF7374',
     },
@@ -22,7 +22,7 @@ function App() {
       nome: 'Overwatch',
       corPrimaria: '#f88d00',
       corSecundaria: '#ffed88',
-    },
+    }, 
 
   ]
 

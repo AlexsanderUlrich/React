@@ -11,7 +11,7 @@ function Formulario(props) {
     const [nome, setNome] = useState('')
     const [funcao, setFuncao] = useState('')
     const [imagem, setImagem] = useState('')
-    const [jogo, setJogo] = useState('')
+    const [jogo, setJogo] = useState('')    
 
     const aoSalvar = (evento) => {
         evento.preventDefault()
@@ -24,7 +24,6 @@ function Formulario(props) {
         setNome('')
         setFuncao('')
         setImagem('')
-        setJogo('')
     }
    
 
@@ -32,11 +31,11 @@ function Formulario(props) {
     return (
         <section className="formulario" >
             <form onSubmit={aoSalvar}>
-                <h2>Preencha os dados para criar o card do colaborador</h2>
+                <h2>Preencha os dados para criar o card do Jogador</h2>
                 <CampoTexto
                     obrigatorio={true}
                     label="Nome"
-                    placeholde="Digite seu nome"
+                    placeholder="Digite o nome do jogador"
                     valor={nome}
                     aoAlterado={valor => setNome(valor)}
                 />
@@ -62,7 +61,7 @@ function Formulario(props) {
                     aoAlterado={valor => setJogo(valor)}
                 />
 
-                <Botao titulo="Gravar" />
+                <Botao titulo="Gravar Jogador" />
             </form>
         </section>
     )
