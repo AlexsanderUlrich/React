@@ -8,6 +8,9 @@ function Jogo (props) {
     const Borda = {
         borderColor: props.corPrimaria
     }
+
+    const Logo =  props.imagem;
+    
     
 
     return(
@@ -20,7 +23,7 @@ function Jogo (props) {
             <div className='player'> 
 
                 <div className='player-card'>
-                           {props.players.map(player => (<Player key={player.nome} nome={player.nome} funcao={player.funcao} imagem={player.imagem} fundo={props.corPrimaria}/> ))}           
+                           {props.players.map(player => (<Player key={player.nome} nome={player.nome} funcao={player.funcao} imagem={Logo} fundo={props.corPrimaria}/> ))}           
                 </div>
             
             </div>

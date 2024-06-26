@@ -12,16 +12,19 @@ function App() {
       nome: 'VALORANT',
       corPrimaria: '#FF1A44',
       corSecundaria: '#FF7374',
+      imagem:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA_4ct2dJgRNcpHlKqS5yIixcWuqWL26ImTg&s',
     },
     {
       nome: 'Counter-Striker',
       corPrimaria: '#02B2D1',
       corSecundaria: '#3575AD',
+      imagem:'https://ih1.redbubble.net/image.4940982788.8058/raf,360x360,075,t,fafafa:ca443f4786.jpg',
     },
     {
       nome: 'Overwatch',
       corPrimaria: '#f88d00',
       corSecundaria: '#ffed88',
+      imagem:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIqOs_MLi2c3T4lWvfx7glZFETEy7Q3oM_4A&s',
     }, 
 
   ]
@@ -42,6 +45,7 @@ function App() {
       {jogos.map(jogo => <Jogo
         key={jogo.nome}
         nome={jogo.nome}
+        imagem={jogo.imagem}
         corPrimaria={jogo.corPrimaria}
         corSecundaria={jogo.corSecundaria}
         players={Players.filter(player => player.jogo === jogo.nome)}

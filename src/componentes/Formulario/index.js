@@ -24,6 +24,7 @@ function Formulario(props) {
         setNome('')
         setFuncao('')
         setImagem('')
+        setJogo('')
     }
    
 
@@ -45,13 +46,7 @@ function Formulario(props) {
                     placeholder="Digite a função"
                     valor={funcao}
                     aoAlterado={valor => setFuncao(valor)}
-                />
-                <CampoTexto
-                    label="Imagem"
-                    placeholder="Digite o endereço da imagem"
-                    valor={imagem}
-                    aoAlterado={valor => setImagem(valor)}
-                />
+                />                
 
                 <ListaSuspensa
                     obrigatorio={true}
@@ -59,6 +54,7 @@ function Formulario(props) {
                     itens={props.nomeDosJogos}
                     valor={jogo}
                     aoAlterado={valor => setJogo(valor)}
+                    key={props.nomeDosJogos}
                 />
 
                 <Botao titulo="Gravar Jogador" />
